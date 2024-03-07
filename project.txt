@@ -1,0 +1,3 @@
+Quiero que cuando un usuario envía datos por primera vez
+se cree un registro en una tabla que no es la de usuarios. O sí si es la de usuario, le agrega un
+

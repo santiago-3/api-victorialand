@@ -1,0 +1,26 @@
+services:
+    laravel-docker:
+        container_name: laravel-doc-app
+        build: .
+        volumes:
+            - .:/var/www/html
+        ports:
+            - 8080:80
+        networks: 
+            - postgres-network
+        depends_on:
+            - postgres
+    postgres:
+        image: postgres:16.0
+        environment:
+            POSTGRES_DB: postgres
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: _ff592Glu54q_
+        ports:
+            - "5433:5432"
+        networks: 
+            - postgres-network
+
+networks: 
+    postgres-network:
+        driver: bridge

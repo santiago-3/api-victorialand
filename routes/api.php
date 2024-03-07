@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/name', [GameController::class, 'provideName'])->middleware(Authenticate::class);
-Route::post('/savegame', [GameController::class, 'index'])->middleware(Authenticate::class);
+Route::post('/setname', [GameController::class, 'setName'])->middleware(Authenticate::class);
